@@ -1,0 +1,127 @@
+*, *::after, *::before{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+body{
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    font-family: 'Comfortaa', cursive;
+    background: #337aff;
+}
+
+.container{
+    height: max-content;
+    font-size: 32px;
+    width: 80vw;
+    padding: 2em;
+    border-radius: 50px;
+    background: #337aff;
+    box-shadow:  20px 20px 60px #2b68d9, 
+                 -20px -20px 60px #3b8cff;
+}
+
+label{
+    display: inline-block;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 16px;
+    margin-left: 0.5em;
+}
+
+.error{
+    display: inline-block;
+    color: #b71c1c;
+    font-weight: 700;
+    font-size: 24px;
+    margin-left: 1em;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.error-visible{
+    visibility: visible;
+    opacity: 1;
+}
+
+.error::before{
+    content: "(";
+    margin-right: 4px;
+}
+
+.error::after{
+    content: ")";
+    margin-left: 4px;
+}
+
+
+input{
+    display: block;
+    color: white;
+    width: 100%;
+    font-size: 40px;
+    border-radius: 24px;
+    background: #337aff;
+    box-shadow: inset 20px 20px 60px #2b68d9, 
+                inset -20px -20px 60px #3b8cff;
+    border: none;
+    outline: none;
+    padding: 0.7em;
+    font-family: 'Comfortaa', cursive;
+}
+
+
+#short-url{
+    padding-left: 2.8em;
+}
+
+section:first-child{
+    margin-bottom: 60px;
+}
+
+section:nth-child(2){
+    margin-bottom: 0px;
+    position: relative;
+}
+
+
+section:nth-child(2)::after{
+    content: '/';
+    position: absolute;
+    border-radius: 50px;
+    background: #337aff;
+    box-shadow:  20px 20px 60px #2b68d9, 
+                 -20px -20px 60px #3b8cff;
+    bottom: 0.2em;
+    font-size: 40px;
+    left: 0.5em;
+    color: white;   
+    padding: 0.5em;
+}
+
+button{
+    position: absolute;
+    font-size: 40px;
+    border-radius: 50px;
+    background-color: #fff;
+    color: #337aff;
+    border: none;
+    outline: none;
+    font-weight: 900;
+    right: 0.5em;
+    bottom: 0.2em;
+    cursor: pointer;
+    width: 2em;
+    height: 2em;
+    display: grid;
+    place-content: center;
+    font-family: 'Comfortaa', cursive; 
+    transition: transform 0.3s cubic-bezier(0.31, 0.57, 0.13, 2.98);
+}
+
+button:hover{
+    transform: scale(1.1);
+}
